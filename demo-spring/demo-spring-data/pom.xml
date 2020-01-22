@@ -7,10 +7,15 @@
         <artifactId>demo-spring</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>demo-spring-security</artifactId>
-    <name>demo-spring-security</name>
-    <!-- FIXME change it to the project's website -->
+    <artifactId>demo-spring-data</artifactId>
+    <packaging>pom</packaging>
+    <name>demo-spring-data</name>
     <url>http://www.example.com</url>
+    <!-- FIXME change it to the project's website -->
+
+    <modules>
+        <module>demo-spring-data-jpa</module>
+    </modules>
 
     <dependencies>
         <dependency>

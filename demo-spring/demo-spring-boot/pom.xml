@@ -7,18 +7,14 @@
         <artifactId>demo-spring</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>demo-spring-security</artifactId>
-    <name>demo-spring-security</name>
+    <artifactId>demo-spring-boot</artifactId>
+    <packaging>pom</packaging>
+    <name>demo-spring-boot</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>demo-spring-boot-web</module>
+    </modules>
 
 </project>

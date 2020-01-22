@@ -2,27 +2,39 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <modules>
-        <module>demo-spring-security</module>
-    </modules>
     <parent>
-        <artifactId>demo-parent</artifactId>
         <groupId>com.ltchen.demo</groupId>
+        <artifactId>demo-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>demo-spring</artifactId>
     <packaging>pom</packaging>
     <name>demo-spring</name>
-    <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
+    <!-- FIXME change it to the project's website -->
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>demo-spring-security</module>
+        <module>demo-spring-data</module>
+        <module>demo-spring-framework</module>
+        <module>demo-spring-boot</module>
+    </modules>
+
+    <properties>
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring boot dependencies -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
